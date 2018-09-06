@@ -11,20 +11,30 @@ export class FormularComponent implements OnInit {
     pFeld01: string;
     pFeld02: string;
 
-
     addZeile(): void {
-        this.ZEILEN.push({feld01: this.pFeld01, feld02: this.pFeld02});
-        this.pFeld01 = "Feld01";
-        this.pFeld02 = "Feld02";
+        if (this.pFeld01 == "") return;
+        if (this.pFeld02 == "") return;
+        if (this.ZEILEN == undefined) {
+            this.ZEILEN = [{feld01: this.pFeld01, feld02: this.pFeld02}];}
+        else {
+            this.ZEILEN.push({feld01: this.pFeld01, feld02: this.pFeld02});}
+
+        this.pFeld01 = "";
+        this.pFeld02 = "";
         console.log("Zeile hinzugefügt");
+    }
+
+    delZeile(index): void {
+        this.xxx = index;
+        this.ZEILEN.splice(index ,1);
     }
 
   constructor() { }
 
   ngOnInit() {
-     this.ZEILEN =  [{ feld01: 11, feld02: 'Mr. Nice' }, { feld01: 12, feld02: 'Narco' }];
-     this.pFeld01 = "Feld01";
-     this.pFeld02 = "Feld02";
+      this.pFeld01 = "";
+      this.pFeld02 = "";
   }
+
 
 }

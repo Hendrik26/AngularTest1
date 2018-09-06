@@ -5,7 +5,9 @@
 </form>
 
 <ul>
-  <li *ngFor="let Zeile of ZEILEN">
-    <span>{{Zeile.feld01}}</span> {{Zeile.feld02}}
+  <li *ngFor="let Zeile of ZEILEN; let i = index">
+    <span>{{Zeile.feld01}}</span> <span>{{Zeile.feld02}}</span> <button (click)="delZeile(i)">löschen</button>
   </li>
 </ul>
+
+
