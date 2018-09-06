@@ -25,7 +25,6 @@ export class FormularComponent implements OnInit {
     }
 
     delZeile(index): void {
-        this.xxx = index;
         this.ZEILEN.splice(index ,1);
     }
 
