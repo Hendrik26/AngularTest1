@@ -1,11 +1,17 @@
-<p> formular works!</p>
-<form action="/action_page.php">
-  Feld01:
-  <input type="text" name="field01">
-  Feld02
-  <input type="text" name="field01">
-  <input type="submit" value="Submit">
-</form>
+
+
+<div>
+  <label>Feld01:
+  <input #neuFelld01 />
+</label>
+  <label>Feld02:
+    <input #neuFelld02 />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input
+  <button (click)="add(heroName.value); heroName.value=''">
+    add
+  </button>-->
+</div>
 
 <ul>
   <li *ngFor="let Zeile of ZEILEN">
