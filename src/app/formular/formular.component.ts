@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AppModule } from './app.module';
 
 @Component({
   selector: 'app-formular',
@@ -15,16 +14,17 @@ export class FormularComponent implements OnInit {
 
     addZeile(): void {
         this.ZEILEN.push({feld01: this.pFeld01, feld02: this.pFeld02});
-        console.log("xx ");
+        this.pFeld01 = "Feld01";
+        this.pFeld02 = "Feld02";
+        console.log("Zeile hinzugefügt");
     }
 
   constructor() { }
 
   ngOnInit() {
-     this.ZEILEN =  [
-         { feld01: 11, feld02: 'Mr. Nice' },
-         { feld01: 12, feld02: 'Narco' }
-     ];
+     this.ZEILEN =  [{ feld01: 11, feld02: 'Mr. Nice' }, { feld01: 12, feld02: 'Narco' }];
+     this.pFeld01 = "Feld01";
+     this.pFeld02 = "Feld02";
   }
 
 }
