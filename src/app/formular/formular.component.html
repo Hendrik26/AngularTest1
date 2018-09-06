@@ -1,17 +1,12 @@
+<form (submit)="addZeile()">
+  Feld01
+  <input type="text" [(ngModel)]="pFeld01" name="Feld01">
+  <br>
+  Feld02
+  <input type="text" [(ngModel)]="pFeld02" name="Feld02">
 
-
-<div>
-  <label>Feld01:
-  <input #neuFelld01 />
-</label>
-  <label>Feld02:
-    <input #neuFelld02 />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input
-  <button (click)="add(heroName.value); heroName.value=''">
-    add
-  </button>-->
-</div>
+  <button type="submit"> hinzufügen</button>
+</form>
 
 <ul>
   <li *ngFor="let Zeile of ZEILEN">
