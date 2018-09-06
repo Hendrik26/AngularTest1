@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularComponent implements OnInit {
 
-    const ZEILEN: Zeile[] = [
+    ZEILEN: Zeile[] = [
         { feld01: 11, feld02: 'Mr. Nice' },
         { feld01: 12, feld02: 'Narco' }
     ];

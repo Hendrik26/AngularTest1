@@ -6,3 +6,9 @@
   <input type="text" name="field01">
   <input type="submit" value="Submit">
 </form>
+
+<ul>
+  <li *ngFor="let Zeile of ZEILEN">
+    <span>{{Zeile.feld01}}</span> {{Zeile.feld02}}
+  </li>
+</ul>
