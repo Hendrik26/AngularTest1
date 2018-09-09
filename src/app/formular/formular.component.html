@@ -6,8 +6,9 @@
 
 <ul>
   <li *ngFor="let zeile of zeilen; let i = index">
-    <span>{{zeile.feld01}}</span> <span>{{zeile.feld02}}</span> <button (click)="delZeile(i)">löschen</button>
+    <span>{{zeile.feld01}}</span>&nbsp;&nbsp; <span>{{zeile.feld02}}</span> <button (click)="delZeile(i)">löschen</button>
   </li>
 </ul>
-
+<br><br>
+<!--button (click)="createFood()">save</button-->
 

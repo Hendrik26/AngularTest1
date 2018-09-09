@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import {DemoService} from './demo.service';
+import {Observable} from 'rxjs/Rx';
 
 @Component({
   selector: 'app-root',
